@@ -1,6 +1,6 @@
 import * as dgram from "dgram";
 import DNSHeader, { OpCode, ResponseCode, TDNSHeader } from "../dns/header";
-import DNSQuestion, { DNSClass, DNSQuestionType } from "../dns/question";
+import DNSQuestion, { DNSClass, DNSType } from "../dns/question";
 
 const defaultheaders: TDNSHeader = {
     id: 1234,
@@ -21,7 +21,7 @@ const defaultheaders: TDNSHeader = {
 const defaultQuestion = {
     name: "codecrafters.io",
     classCode: DNSClass.IN,
-    type: DNSQuestionType.A
+    type: DNSType.A
 
 }
 
